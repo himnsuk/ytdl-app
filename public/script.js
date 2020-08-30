@@ -1,7 +1,7 @@
 let Btn = document.getElementById('btn');
 let URLinput = document.querySelector('.URL-input');
 let select = document.querySelector('.opt');
-let serverURL = 'http://localhost:4000';
+let serverURL = 'https://ytdl1-app.herokuapp.com';
 
 Btn.addEventListener('click', () => {
 	if (!URLinput.value) {
@@ -17,8 +17,10 @@ Btn.addEventListener('click', () => {
 
 function redirectMp3(query) {
 	window.location.href = `${serverURL}/downloadmp3?url=${query}`;
+	URLinput.value = ""
 }
 
 function redirectMp4(query) {
 	window.location.href = `${serverURL}/downloadmp4?url=${query}`;
+	URLinput.value = ""
 }

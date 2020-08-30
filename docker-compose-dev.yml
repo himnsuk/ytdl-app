@@ -2,8 +2,8 @@ version: "3.7"
 
 services:
   web:
-    container_name: ytdl_prod
+    container_name: ytdl_dev
     build:
       context: .
     ports:
-    - 80:4000
+    - 4000:4000
