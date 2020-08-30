@@ -2,6 +2,7 @@ version: "3.7"
 
 services:
   web:
+    container_name: ytdl-app
     build:
       context: .
     ports:
