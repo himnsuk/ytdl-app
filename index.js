@@ -21,7 +21,7 @@ app.get('/downloadmp3', async (req, res, next) => {
         var url = req.query.url;
         let title = 'audio';
 
-        await ytdl.getBasicInfo(url, {
+        await ytdl.getInfo(url, {
             format: 'mp4'
         }, (err, info) => {
             if (err) throw err;
@@ -44,7 +44,7 @@ app.get('/downloadmp4', async (req, res, next) => {
         let URL = req.query.url;
         let title = 'video';
 
-        await ytdl.getBasicInfo(URL, {
+        await ytdl.getInfo(URL, {
             format: 'mp4'
         }, (err, info) => {
             title = info.player_response.videoDetails.title.replace(/[^\x00-\x7F]/g, "");
