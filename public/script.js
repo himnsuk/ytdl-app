@@ -1,8 +1,8 @@
 let Btn = document.getElementById('btn');
 let URLinput = document.querySelector('.URL-input');
 let select = document.querySelector('.opt');
-let serverURL = 'https://ytdl1-app.herokuapp.com';
-// let serverURL = 'http://localhost:4000';
+// let serverURL = 'https://ytdl1-app.herokuapp.com';
+let serverURL = window.location.origin;
 
 Btn.addEventListener('click', () => {
 	if (!URLinput.value) {

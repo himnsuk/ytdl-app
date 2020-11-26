@@ -86,6 +86,8 @@ docker tag ytdl_prod_web:latest registry.heroku.com/<HEROKU-APP-NAME>/web
 
 docker push registry.heroku.com/<HEROKU-APP-NAME>/web
 
+heroku container:push web
+
 heroku container:release web
 ```
 
